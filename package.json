@@ -1,25 +1,35 @@
 {
-    "name": "tengo",
-    "displayName": "tengo",
-    "description": "Tengo syntax highlighting",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.44.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "tengo",
+  "displayName": "tengo",
+  "description": "Tengo syntax highlighting",
+  "publisher": "lissein",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.44.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "tengo",
+        "aliases": [
+          "Tengo",
+          "tengo"
+        ],
+        "extensions": [
+          ".tengo"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "tengo",
-            "aliases": ["Tengo", "tengo"],
-            "extensions": [".tengo"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "tengo",
-            "scopeName": "source.tengo",
-            "path": "./syntaxes/tengo.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "tengo",
+        "scopeName": "source.tengo",
+        "path": "./syntaxes/tengo.tmLanguage.json"
+      }
+    ]
+  }
 }
