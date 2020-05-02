@@ -1,0 +1,115 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Tengo",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#chars"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#block_comment"
+    },
+    {
+      "comment": "Boolean constant",
+      "name": "constant.language.boolean.tengo",
+      "match": "\\b(true|false)\\b"
+    },
+    {
+      "comment": "Built-in functions",
+      "match": "\\b(format|len|copy|len|append|delete|splice|type_name|int|bool|float|char|bytes|error|string|time|is_string|is_bool|is_float|is_char|is_bytes|is_error|is_undefined|is_function|is_callable|is_array|is_immutable_array|is_map|is_iterable|is_time)\\b(?=\\()",
+      "name": "support.function.builtin.tengo"
+    },
+    {
+      "comment": "Comparison operator",
+      "name": "keyword.operator.comparison.tengo",
+      "match": "(&&|\\|\\||==|!=)"
+    },
+    {
+      "comment": "Assignment operator",
+      "name": "keyword.operator.assignment.tengo",
+      "match": "(\\+=|-=|/=|\\*=|%=|\\^=|&=|&^=|\\|=|<<=|>>=|=|:=|--|\\+\\+)"
+    },
+    {
+      "comment": "Arithmetic operator",
+      "name": "keyword.operator.arithmetic.tengo",
+      "match": "(!|\\+|-|/|\\*|%|\\^|&|\\||<<|>>|&^)"
+    },
+    {
+      "comment": "Comparison operator (second group because of regex precedence)",
+      "name": "keyword.operator.comparison.tengo",
+      "match": "(<=|>=|<|>)"
+    },
+    {
+      "comment": "Logging macro",
+      "name": "support.function.log.tengo",
+      "match": "\\b(log|error|warn|info|debug|trace|log_enabled)!"
+    },
+    {
+      "comment": "Function call",
+      "match": "\\b([A-Za-z][A-Za-z0-9_]*|_[A-Za-z0-9_]+)\\s*\\(",
+      "captures": {
+        "1": {
+          "name": "entity.name.function.tengo"
+        }
+      }
+    },
+    {
+      "comment": "Miscellaneous operator",
+      "name": "keyword.operator.misc.tengo",
+      "match": "(in)"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.tengo",
+          "match": "\\b(if|else|for|return|import|func|export)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.tengo",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.tengo",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "chars": {
+      "name": "string.quoted.simple.tengo",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.tengo",
+          "match": "\\\\."
+        }
+      ]
+    },
+
+    "comments": {
+      "name": "comment.line.tengo",
+      "begin": "//",
+      "end": "\n"
+    },
+    "block_comment": {
+      "comment": "Block comment",
+      "name": "comment.block.tengo",
+      "begin": "/\\*",
+      "end": "\\*/"
+    }
+  },
+  "scopeName": "source.tengo"
+}
