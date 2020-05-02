@@ -2,13 +2,13 @@
   "name": "tengo",
   "displayName": "tengo",
   "description": "Tengo syntax highlighting",
-  "publisher": "lissein",
+  "publisher": "graphman",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lissein/vscode-tengo"
+    "url": "https://github.com/graphman65/vscode-tengo"
   },
   "icon": "logo.png",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "engines": {
     "vscode": "^1.44.0"
   },
