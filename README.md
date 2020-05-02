@@ -4,7 +4,7 @@ This extension provides syntax highlighting for the [tengo](https://github.com/d
 
 ## Usage
 
-- Install the "tengo" extension in vscode.
+- Install the [tengo](https://marketplace.visualstudio.com/items?itemName=Lissein.tengo) extension in vscode.
 - Enjoy your syntax highlighting
 
 ## Bugs
