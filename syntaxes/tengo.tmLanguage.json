@@ -18,13 +18,21 @@
       "include": "#block_comment"
     },
     {
+      "include": "#raw_strings"
+    },
+    {
       "comment": "Boolean constant",
       "name": "constant.language.boolean.tengo",
       "match": "\\b(true|false)\\b"
     },
     {
+      "comment": "Constant",
+      "name": "constant.language.tengo",
+      "match": "\\b(undefined)\\b"
+    },
+    {
       "comment": "Built-in functions",
-      "match": "\\b(format|len|copy|len|append|delete|splice|type_name|int|bool|float|char|bytes|error|string|time|is_string|is_bool|is_float|is_char|is_bytes|is_error|is_undefined|is_function|is_callable|is_array|is_immutable_array|is_map|is_iterable|is_time)\\b(?=\\()",
+      "match": "\\b(to_json|from_json|print|printf|sprintf|format|len|copy|len|append|delete|splice|type_name|int|bool|float|char|bytes|error|string|time|is_string|is_bool|is_float|is_char|is_bytes|is_error|is_undefined|is_function|is_callable|is_array|is_immutable_array|is_map|is_iterable|is_time)\\b(?=\\()",
       "name": "support.function.builtin.tengo"
     },
     {
@@ -48,11 +56,6 @@
       "match": "(<=|>=|<|>)"
     },
     {
-      "comment": "Logging macro",
-      "name": "support.function.log.tengo",
-      "match": "\\b(log|error|warn|info|debug|trace|log_enabled)!"
-    },
-    {
       "comment": "Function call",
       "match": "\\b([A-Za-z][A-Za-z0-9_]*|_[A-Za-z0-9_]+)\\s*\\(",
       "captures": {
@@ -63,8 +66,7 @@
     },
     {
       "comment": "Miscellaneous operator",
-      "name": "keyword.operator.misc.tengo",
-      "match": "( in )"
+      "name": "keyword.operator.misc.tengo"
     }
   ],
   "repository": {
@@ -72,7 +74,7 @@
       "patterns": [
         {
           "name": "keyword.control.tengo",
-          "match": "\\b(if|else|for|return|import|func|export)\\b"
+          "match": "\\b(if|else|for|return|import|func|export|in|var)\\b"
         }
       ]
     },
@@ -80,6 +82,17 @@
       "name": "string.quoted.double.tengo",
       "begin": "\"",
       "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.tengo",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "raw_strings": {
+      "name": "string.quoted.double.tengo",
+      "begin": "`",
+      "end": "`",
       "patterns": [
         {
           "name": "constant.character.escape.tengo",
