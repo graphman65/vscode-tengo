@@ -64,7 +64,7 @@
     {
       "comment": "Miscellaneous operator",
       "name": "keyword.operator.misc.tengo",
-      "match": "(in)"
+      "match": "( in )"
     }
   ],
   "repository": {
