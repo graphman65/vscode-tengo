@@ -1,40 +1,41 @@
 {
-  "name": "tengo",
-  "displayName": "tengo",
-  "description": "Tengo syntax highlighting",
-  "publisher": "graphman",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/graphman65/vscode-tengo"
-  },
-  "icon": "logo.png",
-  "version": "0.5.0",
-  "engines": {
-    "vscode": "^1.44.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [
-      {
-        "id": "tengo",
-        "aliases": [
-          "Tengo",
-          "tengo"
-        ],
-        "extensions": [
-          ".tengo"
-        ],
-        "configuration": "./language-configuration.json"
-      }
+    "name": "tengo",
+    "displayName": "tengo",
+    "description": "Tengo syntax highlighting",
+    "publisher": "graphman",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/graphman65/vscode-tengo"
+    },
+    "icon": "logo.png",
+    "version": "0.5.0",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Programming Languages"
     ],
-    "grammars": [
-      {
-        "language": "tengo",
-        "scopeName": "source.tengo",
-        "path": "./syntaxes/tengo.tmLanguage.json"
-      }
-    ]
-  }
+    "contributes": {
+        "languages": [
+            {
+                "id": "tengo",
+                "aliases": [
+                    "Tengo",
+                    "tengo"
+                ],
+                "extensions": [
+                    ".tengo"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tengo",
+                "scopeName": "source.tengo",
+                "path": "./syntaxes/tengo.tmLanguage.json"
+            }
+        ]
+    },
+    "license": "MIT"
 }
